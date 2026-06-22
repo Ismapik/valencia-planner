@@ -1,6 +1,7 @@
 let data = null;
 let currentDay = 0;
-let votes = JSON.parse(localStorage.getItem('valencia_votes') || '{}');
+// votes: { "d1-m1": ["Ismael","Mike"], ... }
+let votes = JSON.parse(localStorage.getItem('valencia_votes2') || '{}');
 
 async function init() {
   try {
@@ -8,7 +9,7 @@ async function init() {
     data = await resp.json();
     renderDay(0);
   } catch (e) {
-    document.getElementById('content').innerHTML = `<div style="padding:40px;text-align:center;"><p>Data laden mislukt</p><p style="font-size:0.85rem;color:#666;">${e.message}</p></div>`;
+    document.getElementById('content').innerHTML = `<div style="padding:40px;text-align:center;"><p>Laden mislukt</p><p style="color:#666;font-size:0.85rem;">${e.message}</p></div>`;
   }
 }
 
@@ -25,79 +26,160 @@ function renderDay(day) {
   el.innerHTML = day === 0 ? renderOverview() : renderDayPage(day);
 }
 
+function getVotes(id) {
+  return votes[id] || [];
+}
+
+function voteCount(id) {
+  return getVotes(id).length;
+}
+
+function isUnanimous(id) {
+  return voteCount(id) === 4;
+}
+
+function getGroup() {
+  return data.trip.group;
+}
+
+/* ===== OVERVIEW ===== */
 function renderOverview() {
   const trip = data.trip;
   const days = data.days;
-  const catMap = {};
-  data.categories.forEach(c => catMap[c.id] = c);
   let cards = '';
   days.forEach(d => {
-    const totalActs = d.activities.length;
-    const votedActs = d.activities.filter(a => votes[a.id] && votes[a.id].length > 0).length;
+    const all = [...(d.main_events||[]), ...(d.around||[])];
+    const unanimous = all.filter(a => isUnanimous(a.id));
+    const confirmed = unanimous.map(a => a.title).join(', ');
     cards += `<div class="overview-card" onclick="switchDay(${d.day})">
       <div class="day-number">Dag ${d.day}</div>
       <div class="day-date">${d.weekday} ${d.date.slice(8,10)} juli</div>
       <h3>${d.title}</h3>
       <div class="day-theme">${d.theme}</div>
-      <div class="activity-count">${votedActs}/${totalActs} gestemd</div>
+      ${confirmed ? `<div class="confirmed-badge">✅ ${confirmed}</div>` : '<div class="empty-badge">Nog niets ingepland</div>'}
     </div>`;
   });
+
   return `<div class="travel-info">
-    <h2>Reisinfo</h2>
+    <h2>🌴 Reisinfo</h2>
     <div class="travel-info-grid">
       <div class="travel-info-item"><strong>Bestemming:</strong> ${trip.destination}</div>
       <div class="travel-info-item"><strong>Wijk:</strong> ${trip.neighborhood}</div>
-      <div class="travel-info-item"><strong>Data:</strong> 6-13 juli</div>
       <div class="travel-info-item"><strong>Groep:</strong> ${trip.group.join(', ')}</div>
-      <div class="travel-info-item"><strong>Aankomst:</strong> ${trip.arrival_time}</div>
+      <div class="travel-info-item"><strong>Aankomst:</strong> ${trip.arrival_time} / check-in ${trip.checkin_time}</div>
       <div class="travel-info-item"><strong>Vertrek:</strong> ${trip.departure_time}</div>
+      <div class="travel-info-item"><strong>Regel:</strong> 4/4 unaniem = ingepland ✅</div>
     </div>
   </div>
-  <h2>Dagoverzicht</h2>
+  <h2>🗺️ Kaart van Valencia</h2>
+  <div class="map-container">
+    <img src="valencia-map.svg" alt="Valencia kaart" style="max-width:100%;border-radius:10px;">
+    <p class="map-caption">La Cabanyal | Malvarrosa | Ciudad de las Artes | Oude Stad | Ruzafa | Albufera</p>
+  </div>
+  <h2>📅 Kies een dag</h2>
   <div class="overview-grid">${cards}</div>
-  <div style="margin-top:20px;padding:16px;background:var(--cream);border-radius:14px;">
-    <strong>Zo werkt het:</strong> Klik op een dag om activiteiten te zien. Klik op een naam om te stemmen.
+  <div class="how-it-works">
+    <strong>💡 Zo werkt het:</strong> Per dag zie je <strong>Main Events</strong> (hoofdactiviteit) en <strong>Eromheen</strong> (aanvullend).
+    Klik op iemands naam om te stemmen 👍. <strong>4/4 = unaniem = ingepland!</strong>
+    De opties met meeste stemmen staan bovenaan.
   </div>`;
 }
 
+/* ===== DAY PAGE ===== */
 function renderDayPage(dayNum) {
   const day = data.days.find(d => d.day === dayNum);
   if (!day) return '<p>Dag niet gevonden</p>';
-  const catMap = {};
-  data.categories.forEach(c => catMap[c.id] = c);
-  let activitiesHtml = '';
-  day.activities.forEach(a => {
-    const cat = catMap[a.category] || { label: a.category, icon: '' };
-    const isVoted = votes[a.id] && votes[a.id].length > 0;
-    let voteBtns = '';
-    data.trip.group.forEach(person => {
-      const hasVoted = votes[a.id] && votes[a.id].includes(person);
-      voteBtns += `<button class="vote-btn ${hasVoted ? 'voted-yes' : ''}" onclick="toggleVote('${a.id}','${person}')">${person}</button>`;
-    });
-    activitiesHtml += `<div class="activity-card ${isVoted ? 'voted' : ''}">
-      <div class="act-time">${a.time}</div>
-      <h3>${a.title}</h3>
-      <div class="act-desc">${a.desc}</div>
-      <div class="act-meta">
-        <span class="act-category">${cat.icon} ${cat.label || a.category}</span>
-        <span>${a.location}</span>
-        <span>${a.cost || '-'}</span>
-      </div>
-      <div class="vote-section">${voteBtns}</div>
-    </div>`;
-  });
-  const noteHtml = day.note ? `<div class="day-note">${day.note}</div>` : '';
-  return `<div class="day-section">
+
+  const mainEvents = day.main_events || [];
+  const around = day.around || [];
+
+  // Determine which are confirmed (unanimous)
+  const confirmed = [...mainEvents, ...around].filter(a => isUnanimous(a.id));
+  const notConfirmed = (items) => items.filter(a => !isUnanimous(a.id))
+    .sort((a, b) => voteCount(b.id) - voteCount(a.id));
+
+  const noteHtml = day.note ? `<div class="day-note">📌 ${day.note}</div>` : '';
+
+  let html = `<div class="day-section">
     <div class="day-header">
       <div class="day-badge">Dag ${day.day} | ${day.weekday} ${day.date.slice(8,10)} juli</div>
       <h2>${day.title}</h2>
       <div class="day-theme">${day.theme}</div>
       ${noteHtml}
+    </div>`;
+
+  // CONFIRMED SECTION
+  if (confirmed.length > 0) {
+    html += `<div class="confirmed-section">
+      <h3 class="confirmed-title">✅ Ingepland (unaniem)</h3>`;
+    confirmed.forEach(a => {
+      html += renderActivityCard(a, true);
+    });
+    html += `</div>`;
+  }
+
+  // MAIN EVENTS
+  const sortedMain = notConfirmed(mainEvents);
+  if (sortedMain.length > 0) {
+    html += `<h3 class="section-title">⭐ Main Events</h3>`;
+    sortedMain.forEach(a => {
+      html += renderActivityCard(a, false);
+    });
+  }
+
+  // AROUND
+  const sortedAround = notConfirmed(around);
+  if (sortedAround.length > 0) {
+    html += `<h3 class="section-title">🍽️ Eromheen</h3>`;
+    sortedAround.forEach(a => {
+      html += renderActivityCard(a, false);
+    });
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function renderActivityCard(a, isConfirmed) {
+  const g = getGroup();
+  const voterList = getVotes(a.id);
+  const count = voterList.length;
+
+  let voteBtns = '';
+  g.forEach(person => {
+    const hasVoted = voterList.includes(person);
+    voteBtns += `<button class="vote-btn ${hasVoted ? 'voted-yes' : ''}" onclick="toggleVote('${a.id}','${person}')">${person}${hasVoted ? ' ✅' : ''}</button>`;
+  });
+
+  const catMap = {};
+  data.categories.forEach(c => catMap[c.id] = c);
+  const cat = catMap[a.category] || { icon: '📍', label: a.category };
+
+  return `<div class="activity-card ${isConfirmed ? 'confirmed' : ''} ${count > 0 ? 'has-votes' : ''}" style="${isConfirmed ? 'border-left-color: #2ecc71;' : ''}">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <div>
+        <h3>${a.title}</h3>
+        <div class="act-desc">${a.desc}</div>
+        <div class="act-meta">
+          <span class="act-category">${cat.icon} ${cat.label}</span>
+          <span>📍 ${a.location}</span>
+          <span>💰 ${a.cost || '-'}</span>
+          <span>⏱️ ${a.time || '-'}</span>
+        </div>
+      </div>
+      <div class="vote-counter ${isUnanimous(a.id) ? 'unanimous' : ''}">
+        <span class="vote-num">${count}</span>
+        <span class="vote-label">/ 4</span>
+      </div>
     </div>
-    ${activitiesHtml}
+    <div class="vote-section">
+      ${voteBtns}
+      ${isUnanimous(a.id) ? '<span class="unanimous-badge">✅ Unaniem! Ingepland</span>' : ''}
+    </div>
   </div>`;
 }
 
+/* ===== VOTE ===== */
 function toggleVote(activityId, person) {
   if (!votes[activityId]) votes[activityId] = [];
   const idx = votes[activityId].indexOf(person);
@@ -107,7 +189,7 @@ function toggleVote(activityId, person) {
   } else {
     votes[activityId].push(person);
   }
-  localStorage.setItem('valencia_votes', JSON.stringify(votes));
+  localStorage.setItem('valencia_votes2', JSON.stringify(votes));
   renderDay(currentDay);
 }
 
