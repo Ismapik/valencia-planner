@@ -2,7 +2,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
   <rect width="800" height="600" fill="#fff8f0"/>
   <text x="400" y="40" font-size="28" font-weight="bold" text-anchor="middle" fill="#3d5a80">Valencia - La Cabanyal</text>
-  <text x="400" y="65" font-size="14" text-anchor="middle" fill="#666">Kaart met bezienswaardigheden</text>
   <rect x="200" y="100" width="120" height="60" rx="10" fill="#e07a5f"/>
   <text x="260" y="130" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Airbnb</text>
   <text x="260" y="145" font-size="12" fill="white" text-anchor="middle">La Cabanyal</text>
@@ -26,12 +25,8 @@
   <ellipse rx="60" ry="30" cx="100" cy="500" fill="#81c3d7"/>
   <text x="100" y="506" font-size="16" font-weight="bold" fill="white" text-anchor="middle">VLC</text>
   <text x="100" y="520" font-size="12" fill="white" text-anchor="middle">Airport</text>
-  <rect x="300" y="160" width="140" height="40" rx="10" fill="#3d5a80"/>
-  <text x="370" y="185" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Marina</text>
   <line x1="320" y1="100" x2="520" y2="80" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
   <text x="420" y="90" font-size="12" fill="#666">5 min</text>
   <line x1="260" y1="160" x2="270" y2="320" stroke="#999" stroke-width="2" stroke-dasharray="3,3"/>
   <text x="260" y="240" font-size="12" fill="#666">15 min metro</text>
-  <line x1="370" y1="200" x2="460" y2="250" stroke="#999" stroke-width="1"/>
-  <text x="400" y="550" font-size="12" fill="#999" text-anchor="middle">Gemaakt door Deep Code | 2026</text>
 </svg>
