@@ -1,1 +1,114 @@
-LyogPT09PT0gVmFsZW5jaWEgVmFjYXRpb24gUGxhbm5lciAtIEFwcCBMb2dpYyA9PT09PSAqLwoKbGV0IGRhdGEgPSBudWxsOwpsZXQgY3VycmVudERheSA9IDA7CmxldCB2b3RlcyA9IEpTT04ucGFyc2UobG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3ZhbGVuY2lhX3ZvdGVzJykgfHwgJ3t9Jyk7Cgphc3luYyBmdW5jdGlvbiBpbml0KCkgewogIHRyeSB7CiAgICBjb25zdCByZXNwID0gYXdhaXQgZmV0Y2goJ2FjdGl2aXRpZXMuanNvbicpOwogICAgZGF0YSA9IGF3YWl0IHJlc3AuanNvbigpOwogICAgcmVuZGVyRGF5KDApOwogIH0gY2F0Y2ggKGUpIHsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjb250ZW50JykuaW5uZXJIVE1MID0gYAogICAgICA8ZGl2IHN0eWxlPSJ0ZXh0LWFsaWduOmNlbnRlcjtwYWRkaW5nOjQwcHg7Ij4KICAgICAgICA8cD5EYXRhIGxhZGVuIG1pc2x1Y3Qg8J+YojwvcD4KICAgICAgICA8cCBzdHlsZT0iZm9udC1zaXplOjAuODVyZW07Y29sb3I6IzY2NjsiPiR7ZS5tZXNzYWdlfTwvcD4KICAgICAgPC9kaXY+YDsKICB9Cn0KCi8qID09PT09IERBWSBOQVZJR0FUSU9OID09PT09ICovCmZ1bmN0aW9uIHN3aXRjaERheShkYXkpIHsKICBjdXJyZW50RGF5ID0gZGF5OwogIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5kYXktYnRuJykuZm9yRWFjaChiID0+IGIuY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJykpOwogIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYC5kYXktYnRuW2RhdGEtZGF5PSIke2RheX0iXWApLmNsYXNzTGlzdC5hZGQoJ2FjdGl2ZScpOwogIHJlbmRlckRheShkYXkpOwogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjb250ZW50Jykuc2Nyb2xsSW50b1ZpZXcoeyBiZWhhdmlvcjogJ3Ntb290aCcsIGJsb2NrOiAnc3RhcnQnIH0pOwp9CgovKiA9PT09PSBSRU5ERVIgPT09PT0gKi8KZnVuY3Rpb24gcmVuZGVyRGF5KGRheSkgewogIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NvbnRlbnQnKTsKICBpZiAoZGF5ID09PSAwKSB7CiAgICBlbC5pbm5lckhUTUwgPSByZW5kZXJPdmVydmlldygpOwogIH0gZWxzZSB7CiAgICBlbC5pbm5lckhUTUwgPSByZW5kZXJEYXlQYWdlKGRheSk7CiAgfQp9CgovKiA9PT09PSBPVUVSVklFVyA9PT09PSAqLwpmdW5jdGlvbiByZW5kZXJPdmVydmlldygpIHsKICBjb25zdCB0cmlwID0gZGF0YS50cmlwOwogIGNvbnN0IGRheXMgPSBkYXRhLmRheXM7CiAgY29uc3QgY2F0TWFwID0ge307CiAgZGF0YS5jYXRlZ29yaWVzLmZvckVhY2goYyA9PiBjYXRNYXBbYy5pZF0gPSBjKTsKCiAgbGV0IGNhcmRzID0gJyc7CiAgZGF5cy5mb3JFYWNoKGQgPT4gewogICAgY29uc3QgdG90YWxBY3RzID0gZC5hY3Rpdml0aWVzLmxlbmd0aDsKICAgIGNvbnN0IHZvdGVkQWN0cyA9IGQuYWN0aXZpdGllcy5maWx0ZXIoYSA9PiB2b3Rlc1thLmlkXSAmJiB2b3Rlc1thLmlkXS5sZW5ndGggPiAwKS5sZW5ndGg7CiAgICBjYXJkcyArPSBgCiAgICAgIDxkaXYgY2xhc3M9Im92ZXJ2aWV3LWNhcmQiIG9uY2xpY2s9InN3aXRjaERheSgke2QuZGF5fSkiPgogICAgICAgIDxkaXYgY2xhc3M9ImRheS1udW1iZXIiPkRhZyAke2QuZGF5fTwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9ImRheS1kYXRlIj4ke2Qud2Vla2RheX0gJHtkLmRhdGUuc2xpY2UoOCl9IGp1bGk8L2Rpdj4KICAgICAgICA8aDM+JHtkLnRpdGxlfTwvaDM+CiAgICAgICAgPGRpdiBjbGFzcz0iZGF5LXRoZW1lIj4ke2QudGhlbWV9PC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0iYWN0aXZpdHktY291bnQiPiR7dm90ZWRBY3RzfS8ke3RvdGFsQWN0c30gZ2VzdGVtZCDwn5OLPC9kaXY+CiAgICAgIDwvZGl2PmA7CiAgfSk7CgogIHJldHVybiBgCiAgICA8ZGl2IGNsYXNzPSJ0cmF2ZWwtaW5mbyI+CiAgICAgIDxoMj7wn4y0IFJlaXNpbmZvPC9oMj4KICAgICAgPGRpdiBjbGFzcz0idHJhdmVsLWluZm8tZ3JpZCI+CiAgICAgICAgPGRpdiBjbGFzcz0idHJhdmVsLWluZm8taXRlbSI+PHN0cm9uZz5CZXN0ZW1taW5nOjwvc3Ryb25nPiAke3RyaXAuZGVzdGluYXRpb259PC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idHJhdmVsLWluZm8taXRlbSI+PHN0cm9uZz5XaWprOjwvc3Ryb25nPiAke3RyaXAubmVpZ2hib3Job29kfTwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InRyYXZlbC1pbmZvLWl0ZW0iPjxzdHJvbmc+RGF0YTo8L3N0cm9uZz4gJHt0cmlwLnN0YXJ0LnNsaWNlKDgsMTApfSBqdWxpIOKAkyAke3RyaXAuZW5kLnNsaWNlKDgsMTApfSBqdWxpPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idHJhdmVsLWluZm8taXRlbSI+PHN0cm9uZz5Hcm9lcDo8L3N0cm9uZz4gJHt0cmlwLmdyb3VwLmpvaW4oJywgJyl9PC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idHJhdmVsLWluZm8taXRlbSI+PHN0cm9uZz7wn42sIEFhbmtvbXN0Ojwvc3Ryb25nPiAke3RyaXAuYXJyaXZhbF90aW1lfSAoY2hlY2staW4gJHt0cmlwLmNoZWNraW5fdGltZX0pPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idHJhdmVsLWluZm8taXRlbSI+PHN0cm9uZz7wn42zIFZlcnRyZWs6PC9zdHJvbmc+ICR7dHJpcC5kZXBhcnR1cmVfdGltZX08L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8aDIgc3R5bGU9Im1hcmdpbi1ib3R0b206MTJweDtjb2xvcjp2YXIoLS12YWxlbmNpYS1ibHVlKTsiPvCfl7fvuI8gS2FhcnQgdmFuIFZhbGVuY2lhPC9oMj4KICAgIDxkaXYgc3R5bGU9ImJhY2tncm91bmQ6dmFyKC0tY2FyZC1iZyk7Ym9yZGVyLXJhZGl1czp2YXIoLS1yYWRpdXMpO3BhZGRpbmc6MTJweDttYXJnaW4tYm90dG9tOjIwcHg7Ym94LXNoYWRvdzp2YXIoLS1zaGFkb3cpO3RleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxpbWcgc3JjPSJ2YWxlbmNpYS1tYXAuc3ZnIiBhbHQ9IlZhbGVuY2lhIGthYXJ0IiBzdHlsZT0ibWF4LXdpZHRoOjEwMCU7Ym9yZGVyLXJhZGl1czo4cHg7Ij4KICAgICAgPHAgc3R5bGU9ImZvbnQtc2l6ZTowLjhyZW07Y29sb3I6dmFyKC0tdGV4dC1saWdodCk7bWFyZ2luLXRvcDo4cHg7Ij7wn5O2IExhIENhYmFueWFsIOKGkiA1IG1pbiBuYWFyIGhldCBzdHJhbmQgwrcgMTUgbWluIG1ldHJvIG5hYXIgY2VudHJ1bTwvcD4KICAgIDwvZGl2PgoKICAgIDxoMiBzdHlsZT0ibWFyZ2luLWJvdHRvbToxMnB4O2NvbG9yOnZhcigtLXZhbGVuY2lhLWJsdWUpOyI+8J+TtSBEYWdvdmVyemljaHQ8L2gyPgogICAgPGRpdiBjbGFzcz0ib3ZlcnZpZXctZ3JpZCI+JHtjYXJkc308L2Rpdj4KCiAgICA8ZGl2IHN0eWxlPSJtYXJnaW4tdG9wOjIwcHg7cGFkZGluZzoxNnB4O2JhY2tncm91bmQ6dmFyKC0tY3JlYW0pO2JvcmRlci1yYWRpdXM6MTRweDtmb250LXNpemU6MC45cmVtOyI+CiAgICAgIDxzdHJvbmc+8J+UnyBabyB3ZXJrdCBoZXQ6PC9zdHJvbmc+IEtsaWsgb3AgZWVuIGRhZyBvbSBhY3Rpdml0ZWl0ZW4gdGUgemllbi4KICAgICAgS2xpayBvcCBlZW4gYWN0aXZpdGVpdCBvbSB0ZSBzdGVtbWVuICjwn5GNKS4gSm91dyBzdGVtbWVuIHdvcmRlbiBsb2thYWwgb3BnZXNsYWdlbi4KICAgIDwvZGl2PgogIGA7Cn0KCi8qID09PT09IERBWSBQQUdFID09PT09ICovCmZ1bmN0aW9uIHJlbmRlckRheVBhZ2UoZGF5TnVtKSB7CiAgY29uc3QgZGF5ID0gZGF0YS5kYXlzLmZpbmQoZCA9PiBkLmRheSA9PT0gZGF5TnVtKTsKICBpZiAoIWRheSkgcmV0dXJuICc8cD5EYWcgbmlldCBnZXZvbmRlbjwvcD4nOwoKICBjb25zdCBjYXRNYXAgPSB7fTsKICBkYXRhLmNhdGVnb3JpZXMuZm9yRWFjaChjID0+IGNhdE1hcFtjLmlkXSA9IGMpOwoKICBsZXQgYWN0aXZpdGllc0h0bWwgPSAnJzsKICBkYXkuYWN0aXZpdGllcy5mb3JFYWNoKGEgPT4gewogICAgY29uc3QgY2F0ID0gY2F0TWFwW2EuY2F0ZWdvcnldIHx8IHsgbGFiZWw6IGEuY2F0ZWdvcnksIGljb246ICfwn4yDJyB9OwogICAgY29uc3QgaXNWb3RlZCA9IHZvdGVzW2EuaWRdICYmIHZvdGVzW2EuaWRdLmxlbmd0aCA+IDA7CiAgICBjb25zdCB2b3Rlckxpc3QgPSBpc1ZvdGVkID8gdm90ZXNbYS5pZF0uam9pbignLCAnKSA6ICcnOwoKICAgIGxldCB2b3RlQnRucyA9ICcnOwogICAgZGF0YS50cmlwLmdyb3VwLmZvckVhY2gocGVyc29uID0+IHsKICAgICAgY29uc3QgaGFzVm90ZWQgPSB2b3Rlc1thLmlkXSAmJiB2b3Rlc1thLmlkXS5pbmNsdWRlcyhwZXJzb24pOwogICAgICB2b3RlQnRucyArPSBgCiAgICAgICAgPGJ1dHRvbiBjbGFzcz0idm90ZS1idG4gJHtoYXNWb3RlZCA/ICd2b3RlZC15ZXMnIDogJyd9IgogICAgICAgICAgICAgICAgb25jbGljaz0idG9nZ2xlVm90ZSgnJHthLmlkfScsJyR7cGVyc29ufSciPgogICAgICAgICAgJHtwZXJzb259ICR7aGFzVm90ZWQgPyAn8J+RjScgOiAnJ30KICAgICAgICA8L2J1dHRvbj5gOwogICAgfSk7CgogICAgYWN0aXZpdGllc0h0bWwgKz0gYAogICAgICA8ZGl2IGNsYXNzPSJhY3Rpdml0eS1jYXJkICR7aXNWb3RlZCA/ICd2b3RlZCcgOiAnJ30iPgogICAgICAgIDxkaXYgY2xhc3M9ImFjdC10aW1lIj4ke2EudGltZX08L2Rpdj4KICAgICAgICA8aDM+JHthLnRpdGxlfTwvaDM+CiAgICAgICAgPGRpdiBjbGFzcz0iYWN0LWRlc2MiPiR7YS5kZXNjfTwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9ImFjdC1tZXRhIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJhY3QtY2F0ZWdvcnkiPiR7Y2F0Lmljb24gfHwgJyd9ICR7Y2F0LmxhYmVsIHx8IGEuY2F0ZWdvcnl9PC9zcGFuPgogICAgICAgICAgPHNwYW4+8J+TjSAke2EubG9jYXRpb259PC9zcGFuPgogICAgICAgICAgPHNwYW4+8J+agCAke2EuY29zdCB8fCAn4oCUJ308L3NwYW4+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idm90ZS1zZWN0aW9uIj4KICAgICAgICAgICR7dm90ZUJ0bnN9CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PmA7CiAgfSk7CgogIGNvbnN0IG5vdGVIdG1sID0gZGF5Lm5vdGUgPyBgPGRpdiBjbGFzcz0iZGF5LW5vdGUiPvCfk4wgJHtkYXkubm90ZX08L2Rpdj5gIDogJyc7CgogIHJldHVybiBgCiAgICA8ZGl2IGNsYXNzPSJkYXktc2VjdGlvbiI+CiAgICAgIDxkaXYgY2xhc3M9ImRheS1oZWFkZXIiPgogICAgICAgIDxkaXYgY2xhc3M9ImRheS1iYWRnZSI+RGFnICR7ZGF5LmRheX0gwrcgJHtkYXkud2Vla2RheX0gJHtkYXkuZGF0ZS5zbGljZSg4LDEwKX0ganVsaTwvZGl2PgogICAgICAgIDxoMj4ke2RheS50aXRsZX08L2gyPgogICAgICAgIDxkaXYgY2xhc3M9ImRheS10aGVtZSI+JHtkYXkudGhlbWV9PC9kaXY+CiAgICAgICAgJHtub3RlSHRtbH0KICAgICAgPC9kaXY+CiAgICAgICR7YWN0aXZpdGllc0h0bWx9CiAgICA8L2Rpdj4KICBgOwp9CgovKiA9PT09PSBWT1RFIFNZU1RFTSA9PT09PSAqLwpmdW5jdGlvbiB0b2dnbGVWb3RlKGFjdGl2aXR5SWQsIHBlcnNvbikgewogIGlmICghdm90ZXNbYWN0aXZpdHlJZF0pIHZvdGVzW2FjdGl2aXR5SWRdID0gW107CgogIGNvbnN0IGlkeCA9IHZvdGVzW2FjdGl2aXR5SWRdLmluZGV4T2YocGVyc29uKTsKICBpZiAoaWR4ID4gLTEpIHsKICAgIHZvdGVzW2FjdGl2aXR5SWRdLnNwbGljZShpZHgsIDEpOwogICAgaWYgKHZvdGVzW2FjdGl2aXR5SWRdLmxlbmd0aCA9PT0gMCkgZGVsZXRlIHZvdGVzW2FjdGl2aXR5SWRdOwogIH0gZWxzZSB7CiAgICB2b3Rlc1thY3Rpdml0eUlkXS5wdXNoKHBlcnNvbik7CiAgfQoKICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgndmFsZW5jaWFfdm90ZXMnLCBKU09OLnN0cmluZ2lmeSh2b3RlcykpOwogIHJlbmRlckRheShjdXJyZW50RGF5KTsKfQoKLyogPT09PT0gRVhQT1JUIFZPVEVTID09PT09ICovCmZ1bmN0aW9uIGV4cG9ydFZvdGVzKCkgewogIGNvbnN0IGJsb2IgPSBuZXcgQmxvYihbSlNPTi5zdHJpbmdpZnkodm90ZXMsIG51bGwsIDIpXSwgeyB0eXBlOiAnYXBwbGljYXRpb24vanNvbicgfSk7CiAgY29uc3QgdXJsID0gVVJMLmNyZWF0ZU9iamVjdFVSTChibG9iKTsKICBjb25zdCBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnYScpOwogIGEuaHJlZiA9IHVybDsKICBhLmRvd25sb2FkID0gJ3ZhbGVuY2lhLXZvdGVzLmpzb24nOwogIGEuY2xpY2soKTsKICBVUkwucmV2b2tlT2JqZWN0VVJMKHVybCk7Cn0KCi8qID09PT09IFNUQVJUID09PT09ICovCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBpbml0KTs=
+let data = null;
+let currentDay = 0;
+let votes = JSON.parse(localStorage.getItem('valencia_votes') || '{}');
+
+async function init() {
+  try {
+    const resp = await fetch('activities.json');
+    data = await resp.json();
+    renderDay(0);
+  } catch (e) {
+    document.getElementById('content').innerHTML = `<div style="padding:40px;text-align:center;"><p>Data laden mislukt</p><p style="font-size:0.85rem;color:#666;">${e.message}</p></div>`;
+  }
+}
+
+function switchDay(day) {
+  currentDay = day;
+  document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.day-btn[data-day="${day}"]`).classList.add('active');
+  renderDay(day);
+  document.getElementById('content').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderDay(day) {
+  const el = document.getElementById('content');
+  el.innerHTML = day === 0 ? renderOverview() : renderDayPage(day);
+}
+
+function renderOverview() {
+  const trip = data.trip;
+  const days = data.days;
+  const catMap = {};
+  data.categories.forEach(c => catMap[c.id] = c);
+  let cards = '';
+  days.forEach(d => {
+    const totalActs = d.activities.length;
+    const votedActs = d.activities.filter(a => votes[a.id] && votes[a.id].length > 0).length;
+    cards += `<div class="overview-card" onclick="switchDay(${d.day})">
+      <div class="day-number">Dag ${d.day}</div>
+      <div class="day-date">${d.weekday} ${d.date.slice(8,10)} juli</div>
+      <h3>${d.title}</h3>
+      <div class="day-theme">${d.theme}</div>
+      <div class="activity-count">${votedActs}/${totalActs} gestemd</div>
+    </div>`;
+  });
+  return `<div class="travel-info">
+    <h2>Reisinfo</h2>
+    <div class="travel-info-grid">
+      <div class="travel-info-item"><strong>Bestemming:</strong> ${trip.destination}</div>
+      <div class="travel-info-item"><strong>Wijk:</strong> ${trip.neighborhood}</div>
+      <div class="travel-info-item"><strong>Data:</strong> 6-13 juli</div>
+      <div class="travel-info-item"><strong>Groep:</strong> ${trip.group.join(', ')}</div>
+      <div class="travel-info-item"><strong>Aankomst:</strong> ${trip.arrival_time}</div>
+      <div class="travel-info-item"><strong>Vertrek:</strong> ${trip.departure_time}</div>
+    </div>
+  </div>
+  <h2>Dagoverzicht</h2>
+  <div class="overview-grid">${cards}</div>
+  <div style="margin-top:20px;padding:16px;background:var(--cream);border-radius:14px;">
+    <strong>Zo werkt het:</strong> Klik op een dag om activiteiten te zien. Klik op een naam om te stemmen.
+  </div>`;
+}
+
+function renderDayPage(dayNum) {
+  const day = data.days.find(d => d.day === dayNum);
+  if (!day) return '<p>Dag niet gevonden</p>';
+  const catMap = {};
+  data.categories.forEach(c => catMap[c.id] = c);
+  let activitiesHtml = '';
+  day.activities.forEach(a => {
+    const cat = catMap[a.category] || { label: a.category, icon: '' };
+    const isVoted = votes[a.id] && votes[a.id].length > 0;
+    let voteBtns = '';
+    data.trip.group.forEach(person => {
+      const hasVoted = votes[a.id] && votes[a.id].includes(person);
+      voteBtns += `<button class="vote-btn ${hasVoted ? 'voted-yes' : ''}" onclick="toggleVote('${a.id}','${person}')">${person}</button>`;
+    });
+    activitiesHtml += `<div class="activity-card ${isVoted ? 'voted' : ''}">
+      <div class="act-time">${a.time}</div>
+      <h3>${a.title}</h3>
+      <div class="act-desc">${a.desc}</div>
+      <div class="act-meta">
+        <span class="act-category">${cat.icon} ${cat.label || a.category}</span>
+        <span>${a.location}</span>
+        <span>${a.cost || '-'}</span>
+      </div>
+      <div class="vote-section">${voteBtns}</div>
+    </div>`;
+  });
+  const noteHtml = day.note ? `<div class="day-note">${day.note}</div>` : '';
+  return `<div class="day-section">
+    <div class="day-header">
+      <div class="day-badge">Dag ${day.day} | ${day.weekday} ${day.date.slice(8,10)} juli</div>
+      <h2>${day.title}</h2>
+      <div class="day-theme">${day.theme}</div>
+      ${noteHtml}
+    </div>
+    ${activitiesHtml}
+  </div>`;
+}
+
+function toggleVote(activityId, person) {
+  if (!votes[activityId]) votes[activityId] = [];
+  const idx = votes[activityId].indexOf(person);
+  if (idx > -1) {
+    votes[activityId].splice(idx, 1);
+    if (votes[activityId].length === 0) delete votes[activityId];
+  } else {
+    votes[activityId].push(person);
+  }
+  localStorage.setItem('valencia_votes', JSON.stringify(votes));
+  renderDay(currentDay);
+}
+
+document.addEventListener('DOMContentLoaded', init);
